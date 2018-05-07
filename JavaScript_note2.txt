@@ -1,0 +1,46 @@
+浏览器：
+     window:浏览器窗口
+            window.innerWidth 和 window.innerHeight
+            window.outerWidth 和 window.outerWidth
+     navigator:浏览器信息
+            navigator.appName：浏览器名称；
+            navigator.appVersion：浏览器版本；
+            navigator.language：浏览器设置的语言；
+            navigator.platform：操作系统类型；
+            navigator.userAgent：浏览器设定的User-Agent字符串
+            
+            var width = window.innerWidth || document.body.clientWidth;
+
+     screen：
+            screen.width：屏幕宽度，以像素为单位；
+            screen.height：屏幕高度，以像素为单位；
+            screen.colorDepth：返回颜色位数，如8、16、24
+     location： 对象表示当前页面的URL信息
+     http://www.example.com:8080/path/index.html?a=1&b=2#TOP
+            location.href
+            location.protocol; // 'http'
+            location.host; // 'www.example.com'
+            location.port; // '8080'
+            location.pathname; // '/path/index.html'
+            location.search; // '?a=1&b=2'
+            location.hash; // 'TOP' 
+     document:
+            对象表示当前页面:  document对象就是整个DOM树的根节点
+            document.title            
+            要查找DOM树的某个节点，需要从document对象开始查找。最常用的查找是根据ID和Tag Name。
+            document.cookie读取到当前页面的Cookie
+Promise:
+     var p1 = new Promise(test);//变量p1是一个Promise对象，它负责执行test函数
+     var p2 = p1.then(function (result) {
+         console.log('成功：' + result);。//由于test函数在内部是异步执行的，当test函数执行成功时
+});
+     var p3 = p2.catch(function (reason) {
+         console.log('失败：' + reason);//当test函数执行失败时，我们告诉Promise对象
+});
+    简化：
+       new Promise(test).then(function (result){
+           console.log('success: '+result);
+       }).catch(function (reason){
+           console.log('fail: '+reason); 
+       });    
+     

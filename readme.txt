@@ -1,0 +1,1 @@
+it's a note of learning javascript!
